@@ -1,6 +1,5 @@
 import Castle from "./components/01_Castle"
 
-
 export default function App() {
   return (
     <div>
