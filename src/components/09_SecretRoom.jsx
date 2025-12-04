@@ -14,9 +14,10 @@ export default function SecretRoom({question, answer,handleAnswer }){
             onChange={handleAnswer}
             className="w-[150px] bg-white text-black rounded px-2 py-1" 
             />
-            <p className="text-yellow-300">{answer ? `✅${answer}`: "⌛Waiting for a reply" }</p>
-            
-        
+            <p className="text-yellow-300">
+                {answer ? `✅${answer}`: "⌛Waiting for a reply" }
+            </p>
+
             {/* <p>🗝️ This is the final room.</p> */}
         </div>
     );
