@@ -1,6 +1,15 @@
 @import "tailwindcss";
+
 @layer base {
-    p {
-        @apply text-center;
-    }
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  p {
+    @apply text-center px-2 text-sm md:text-base lg:text-xl;
+  }
+
+  textarea {
+    @apply bg-white text-black rounded px-2 py-1;
+  }
 }

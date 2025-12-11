@@ -5,14 +5,12 @@ export default function CastleRooms(){
      const [question, setQuestion ] = useState("");
   const [answer, setAnswer ] = useState("");
 
-
   const handleQuestion = (e) => {
 setQuestion(e.target.value);
   }
   const handleAnswer = (e) => {
     setAnswer(e.target.value);
   };
-
 
 return (
     <>
@@ -21,12 +19,14 @@ return (
       <textarea
         value={question}
         onChange={handleQuestion}
-        className="bg-white text-black px-2 py-1"/>
+        placeholder="Type your message here..."
+        />
       <p className="text-yellow-300">
         {question ? `✅${question}` : "⌛Waiting for a message..." }
       </p>
       <p className="text-green-300">Reply from the Secret Room: </p>
-      <p className="text-yellow-300">{answer ? answer: "⌛Waiting for a reply..."}</p>
+      <p className="text-yellow-300">
+        {answer ? `✅ ${answer}` : "⏳ Waiting for a reply..."}</p>
       <Castle question={question} answer = {answer} handleAnswer = {handleAnswer} /> 
     </>
 );
